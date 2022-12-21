@@ -34,6 +34,8 @@ namespace sampleLiveChart2
         readonly UserControlCartesianChart realChart;
         readonly UserControlPieChartPanel pieChart = new UserControlPieChartPanel();
         readonly UserControlGaugeChartPanel gaugeChart = new UserControlGaugeChartPanel();
+        readonly UserControlBarChart barChart = new UserControlBarChart();
+        readonly UserControlMotionCnvas motionChart = new UserControlMotionCnvas();
 
         public Form1()
         {
@@ -48,19 +50,24 @@ namespace sampleLiveChart2
             panel1.Controls.Add(realChart);
             panel1.Controls.Add(pieChart);
             panel1.Controls.Add(gaugeChart);
+            panel1.Controls.Add(barChart);
+            panel1.Controls.Add(motionChart);
 
             sampleChart.Dock = System.Windows.Forms.DockStyle.Fill;
             realChart.Dock = System.Windows.Forms.DockStyle.Fill;
             pieChart.Dock = System.Windows.Forms.DockStyle.Fill;
             gaugeChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            barChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            motionChart.Dock = System.Windows.Forms.DockStyle.Fill;
 
             sampleChart.Visible = true;
             realChart.Visible = false;
             pieChart.Visible = false;
             gaugeChart.Visible = false;
+            barChart.Visible = false;
+            motionChart.Visible = false;
 
             PieChartSetData(510, 490);
-
         }
 
         private ConcurrentDictionary<string, DeviceData> _deviceList = new ConcurrentDictionary<string, DeviceData>();
@@ -154,6 +161,8 @@ namespace sampleLiveChart2
 
                 // gauge chart
                 gaugeChart?.SetDrawGaugeChart(list3, list2);
+
+                barChart?.SetDrawBarChart(list3, title);
             }
         }
 
@@ -200,7 +209,8 @@ namespace sampleLiveChart2
             realChart.Visible = false;
             pieChart.Visible = false;
             gaugeChart.Visible = false;
-
+            barChart.Visible = false;
+            motionChart.Visible = false;
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -209,6 +219,8 @@ namespace sampleLiveChart2
             realChart.Visible = true;
             pieChart.Visible = false;
             gaugeChart.Visible = false;
+            barChart.Visible = false;
+            motionChart.Visible = false;
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -217,6 +229,8 @@ namespace sampleLiveChart2
             realChart.Visible = false;
             pieChart.Visible = true;
             gaugeChart.Visible = false;
+            barChart.Visible = false;
+            motionChart.Visible = false;
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -225,6 +239,28 @@ namespace sampleLiveChart2
             realChart.Visible = false;
             pieChart.Visible = false;
             gaugeChart.Visible = true;
+            barChart.Visible = false;
+            motionChart.Visible = false;
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            sampleChart.Visible = false;
+            realChart.Visible = false;
+            pieChart.Visible = false;
+            gaugeChart.Visible = false;
+            barChart.Visible = true;
+            motionChart.Visible = false;
+        }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            sampleChart.Visible = false;
+            realChart.Visible = false;
+            pieChart.Visible = false;
+            gaugeChart.Visible = false;
+            barChart.Visible = false;
+            motionChart.Visible = true;
         }
     }
 }

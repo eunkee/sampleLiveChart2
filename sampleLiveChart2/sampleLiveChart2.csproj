@@ -115,6 +115,12 @@
     <Compile Include="Component\RJDropdownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Component\UserControlMotionCnvas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\UserControlMotionCnvas.designer.cs">
+      <DependentUpon>UserControlMotionCnvas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\UserControlCartesianChart.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,6 +151,12 @@
     <Compile Include="Component\UserControlGaugeChartPanel.designer.cs">
       <DependentUpon>UserControlGaugeChartPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\UserControlBarChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\UserControlBarChart.designer.cs">
+      <DependentUpon>UserControlBarChart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\UserControlPieChart.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,6 +184,9 @@
     <Compile Include="UserControlSimpleChart.Designer.cs">
       <DependentUpon>UserControlSimpleChart.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Component\UserControlMotionCnvas.resx">
+      <DependentUpon>UserControlMotionCnvas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Component\UserControlCartesianChart.resx">
       <DependentUpon>UserControlCartesianChart.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Component\UserControlGaugeChartPanel.resx">
       <DependentUpon>UserControlGaugeChartPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\UserControlBarChart.resx">
+      <DependentUpon>UserControlBarChart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\UserControlPieChart.resx">
       <DependentUpon>UserControlPieChart.cs</DependentUpon>
